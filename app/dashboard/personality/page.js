@@ -400,7 +400,6 @@ function PersonalityInner() {
               </div>
             </div>
           )}
-
           {/* Input Area */}
           <div style={{ padding: '14px 20px', borderTop: `1px solid ${T.border}`, display: 'flex', gap: 10, alignItems: 'flex-end', background: isDark ? '#1a1a1a' : '#F8FBF9', flexShrink: 0 }}>
             <textarea
