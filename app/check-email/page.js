@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Mail } from 'lucide-react';
 
-export default function CheckEmail() {
+function CheckEmailContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const plan = searchParams.get('plan');
@@ -16,8 +16,8 @@ export default function CheckEmail() {
 
   useEffect(() => {
     let active = true;
-   const next = searchParams.get('next');
-   const dest = next ? next : isPaidPlan ? `/checkout?plan=${plan}` : '/dashboard';
+    const next = searchParams.get('next');
+    const dest = next ? next : isPaidPlan ? `/checkout?plan=${plan}` : '/dashboard';
     const check = () => fetch('/api/auth/me').then((r) => r.json()).then((d) => {
       if (!active || !d.user) return;
       setEmail(d.user.email || '');
@@ -28,7 +28,6 @@ export default function CheckEmail() {
     return () => { active = false; clearInterval(id); };
   }, [router, isPaidPlan, plan]);
 
-  // Tick the resend cooldown down to zero.
   useEffect(() => {
     if (cooldown <= 0) return;
     const id = setInterval(() => setCooldown((c) => (c <= 1 ? 0 : c - 1)), 1000);
@@ -89,5 +88,13 @@ export default function CheckEmail() {
         </button>
       </div>
     </div>
+  );
+}
+
+export default function CheckEmail() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: '100vh', background: '#F0F7F4' }} />}>
+      <CheckEmailContent />
+    </Suspense>
   );
 }
