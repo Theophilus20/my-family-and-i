@@ -340,7 +340,7 @@ function PersonalityInner() {
             </div>
           </div>
 
-          {/* Messages Area */}
+         {/* Messages Area */}
           <div style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: 16, wordBreak: 'break-word' }}>
             {messages.map((msg, i) => (
               <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: msg.role === 'user' ? 'flex-end' : 'flex-start', width: '100%' }}>
@@ -383,22 +383,23 @@ function PersonalityInner() {
             )}
 
             <div ref={bottomRef}/>
-
-            {messages.length === 1 && (
-              <div style={{ padding: '0 0 16px 0', flexShrink: 0 }}>
-                <p style={{ fontSize: 11, fontWeight: 600, color: T.textMut, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 10 }}>Suggested questions</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                  {SUGGESTED.map((q) => (
-                    <button key={q} onClick={() => sendMessage(q)} style={{ background: T.surface2, border: `1.5px solid ${T.border}`, borderRadius: 100, padding: '7px 14px', fontSize: 12, color: T.textSub, fontWeight: 500, cursor: 'pointer', fontFamily: "'Plus Jakarta Sans',sans-serif", transition: 'all .2s', textAlign: 'left' }}
-                      onMouseEnter={(e) => { e.currentTarget.style.borderColor = BRAND.green; e.currentTarget.style.color = BRAND.green; }}
-                      onMouseLeave={(e) => { e.currentTarget.style.borderColor = T.border; e.currentTarget.style.color = T.textSub; }}>
-                      {q}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
+
+          {/* Suggested Questions — sits just above input */}
+          {messages.length === 1 && (
+            <div style={{ padding: '12px 20px', borderTop: `1px solid ${T.border}`, background: isDark ? '#1a1a1a' : '#F8FBF9', flexShrink: 0 }}>
+              <p style={{ fontSize: 11, fontWeight: 600, color: T.textMut, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>Suggested questions</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {SUGGESTED.map((q) => (
+                  <button key={q} onClick={() => sendMessage(q)} style={{ background: T.surface2, border: `1.5px solid ${T.border}`, borderRadius: 100, padding: '7px 14px', fontSize: 12, color: T.textSub, fontWeight: 500, cursor: 'pointer', fontFamily: "'Plus Jakarta Sans',sans-serif", transition: 'all .2s', textAlign: 'left' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.borderColor = BRAND.green; e.currentTarget.style.color = BRAND.green; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = T.border; e.currentTarget.style.color = T.textSub; }}>
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Input Area */}
           <div style={{ padding: '14px 20px', borderTop: `1px solid ${T.border}`, display: 'flex', gap: 10, alignItems: 'flex-end', background: isDark ? '#1a1a1a' : '#F8FBF9', flexShrink: 0 }}>
