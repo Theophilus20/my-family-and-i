@@ -53,7 +53,7 @@ export default function FeatureGate({ feature, children }) {
         {isOwnerView ? (
           <>
             <p style={{ fontSize: 14, color: T.textMut, lineHeight: 1.65, marginBottom: 28 }}>
-              Upgrade to the {needLabel} plan to unlock {label} and keep building your My Family and I.
+              Upgrade to the {needLabel} plan to unlock {label} and keep building your Legacy.
             </p>
             <button onClick={() => router.push(`/checkout?plan=${needPlan}&interval=monthly`)} {...{ onMouseEnter: (e) => (e.currentTarget.style.filter = 'brightness(0.92)'), onMouseLeave: (e) => (e.currentTarget.style.filter = 'brightness(1)') }} style={{ background: `linear-gradient(135deg,${BRAND.green},${BRAND.greenD})`, border: 'none', borderRadius: 12, padding: '13px 28px', fontSize: 14, fontWeight: 700, color: '#fff', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 8, boxShadow: '0 4px 16px rgba(74,186,139,0.35)', fontFamily: "'Plus Jakarta Sans',sans-serif" }}>
               <Sparkles size={15} /> Upgrade to {needLabel}

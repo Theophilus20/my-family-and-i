@@ -137,7 +137,7 @@ export default function Overview() {
     <FadeIn>
       <div>
         <h1 style={{ fontSize: 'clamp(22px,4vw,30px)', fontWeight: 800, color: T.text, marginBottom: 4 }}>
-          {isOwnerView ? (firstName ? `${t.greeting}, ${firstName}` : '\u00A0') : `${greetingName ? `${greetingName}'s` : 'Legacy'}`}
+          {isOwnerView ? (firstName ? `${t.greeting}, ${firstName}` : '\u00A0') : `${greetingName ? `${greetingName}'s Legacy` : 'Legacy'}`}
         </h1>
 
         <p style={{ fontSize: 14, color: T.textMut }}>
