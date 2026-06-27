@@ -17,12 +17,11 @@ const suggestedFor = (name, isOwner) => {
   const who = isOwner ? 'you' : (name || 'they');
   const poss = isOwner ? 'your' : (name ? `${name}'s` : 'their');
   return [
-    `What business advice would ${who} give about starting a company?`,
-    `What did ${who} say about failure?`,
-    `How does ${who} feel about family?`,
-    `What financial lessons ${isOwner ? 'have you' : 'have they'} learned?`,
-    `What would ${who} say to someone going through a hard time?`,
-    `What is ${poss} advice on partnerships?`,
+    `What business advice would give me about starting a company?`,
+    `What would you say about failure?`,
+    `What financial lessons have you learnt? `,
+    `What would  say to someone going through a hard time?`,
+    `What advice will you give me on partnerships?`,
   ];
 };
 
