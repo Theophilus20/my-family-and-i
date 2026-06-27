@@ -95,7 +95,7 @@ export default function AcceptInvite() {
         {invite?.owner_name || 'Someone'} invited you
       </h2>
       <p style={{ fontSize: 14, color: T.textSub, lineHeight: 1.7, marginBottom: 20 }}>
-        You&apos;ve been invited to join <strong style={{ color: T.text }}>{invite?.owner_name || 'their'}</strong>&apos;s My Family and I vault on My Family and I as a <strong style={{ color: BRAND.green }}>{ROLE_LABEL[invite?.role] || 'member'}</strong>.
+        You&apos;ve been invited to join <strong style={{ color: T.text }}>{invite?.owner_name || 'their'}</strong>&apos;s Family vault on My Family and I as a <strong style={{ color: BRAND.green }}>{ROLE_LABEL[invite?.role] || 'member'}</strong>.
       </p>
       <div style={{ background: T.surface2, border: `1.5px solid ${T.border}`, borderRadius: 12, padding: '14px 16px', marginBottom: 24 }}>
         <p style={{ fontSize: 13, color: T.textSub, lineHeight: 1.6 }}>{ROLE_DESC[invite?.role] || ''}</p>

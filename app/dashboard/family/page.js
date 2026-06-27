@@ -246,7 +246,7 @@ if (userLoading) {
           <div style={{ background: T.surface, border: `1.5px solid ${T.border}`, borderRadius: 24, padding: 32, maxWidth: 420, width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.3)' }}>
             <h3 style={{ fontSize: 22, fontWeight: 800, color: T.text, marginBottom: 10, fontFamily: "'Plus Jakarta Sans',sans-serif", textTransform: 'capitalize' }}>Remove {confirmRemove.name}?</h3>
             <p style={{ fontSize: 14, color: T.textMut, lineHeight: 1.65, marginBottom: 24, maxWidth: 640 }}>
-              They&apos;ll lose access to your My Family and I vault. You can always invite them again later.
+              They&apos;ll lose access to your Family vault. You can always invite them again later.
             </p>
             <div style={{ display: 'flex', gap: 10 }}>
               <button onClick={() => setConfirmRemove(null)}
