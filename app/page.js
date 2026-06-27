@@ -68,7 +68,7 @@ function Hero() {
                 <button onClick={() => router.push('/signup')} style={{ background: `linear-gradient(135deg,${BRAND.green},${BRAND.greenD})`, border: 'none', borderRadius: 14, padding: '16px 36px', fontSize: 16, fontWeight: 700, color: '#fff', display: 'flex', alignItems: 'center', gap: 9, cursor: 'pointer', boxShadow: '0 8px 24px rgba(74,186,139,0.4)', fontFamily: "'Plus Jakarta Sans',sans-serif", transition: 'all .2s' }}>
                   {t.get_started} <ArrowRight size={17}/>
                 </button>
-                <button onClick={() => window.open('https://youtube.com/watch?v=YOUR_VIDEO_ID', '_blank')} style={{ background: T.surface,border: `1.5px solid ${T.border}`, borderRadius: 14, padding: '15px 28px', fontSize: 16, color: T.textSub, fontWeight: 600, cursor: 'pointer', fontFamily: "'Plus Jakarta Sans',sans-serif", transition: 'all .2s' }}
+                <button onClick={() => window.open('https://youtu.be/e6YPDSlxmr8', '_blank')} style={{ background: T.surface,border: `1.5px solid ${T.border}`, borderRadius: 14, padding: '15px 28px', fontSize: 16, color: T.textSub, fontWeight: 600, cursor: 'pointer', fontFamily: "'Plus Jakarta Sans',sans-serif", transition: 'all .2s' }}
                   onMouseEnter={(e) => { e.currentTarget.style.borderColor = BRAND.green; e.currentTarget.style.color = BRAND.green; }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = T.border; e.currentTarget.style.color = T.textSub; }}>
                   {t.watch_demo}
@@ -389,11 +389,11 @@ function Footer() {
             <p style={{ fontSize: 14, color: T.textMut, lineHeight: 1.7, maxWidth: 240, marginBottom: 20 }}>Your life is a story worth preserving. My Family and I makes sure the people you love can always hear it.</p>
             <div style={{ display: 'flex', gap: 12 }}>
               {[
-                { label: 'X', href: 'https://x.com/My Family and I', icon: (
+                { label: 'X', href: 'https://x.com/myfamilyandixyz', icon: (
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 ) },
-                { label: 'Instagram', href: 'https://instagram.com/My Family and I', icon: <Instagram size={16}/> },
-                { label: 'Facebook', href: 'https://facebook.com/My Family and I', icon: <Facebook size={16}/> },
+                { label: 'Instagram', href: 'https://www.instagram.com/myfamilyandixyz?igsh=bjc4cnFidGl5aTVv', icon: <Instagram size={16}/> },
+                { label: 'Facebook', href: 'https://www.facebook.com/share/192BHqbZzP/', icon: <Facebook size={16}/> },
               ].map(({ label, href, icon }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
                   style={{ width: 38, height: 38, borderRadius: 10, background: T.surface2, border: `1px solid ${T.border}`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: T.textMut, cursor: 'pointer', transition: 'all .2s', textDecoration: 'none' }}
