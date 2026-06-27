@@ -33,7 +33,7 @@ function VerifyInner() {
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#F0F7F4', padding: 24, fontFamily: "'Plus Jakarta Sans', -apple-system, sans-serif" }}>
       <div style={{ background: '#fff', border: '1.5px solid #E3ECE8', borderRadius: 24, padding: '44px 36px', maxWidth: 460, width: '100%', textAlign: 'center', boxShadow: '0 24px 64px rgba(20,40,30,0.08)' }}>
         <h1 style={{ fontSize: 24, fontWeight: 800, color: '#14281E', marginBottom: 28 }}>
-          My Family and I<span style={{ color: '#4ABA8B' }}>and I</span>
+          My Family and <span style={{ color: '#4ABA8B' }}>and I</span>
         </h1>
 
         {state === 'verifying' && (

@@ -41,7 +41,7 @@ export default function AcceptInvite() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Could not accept invite.');
       setDone(true);
-      setTimeout(() => router.push('/dashboard'), 1500);
+      setTimeout(() => window.location.href = '/dashboard', 1500);
     } catch (e) {
       setError(e.message);
     } finally {
