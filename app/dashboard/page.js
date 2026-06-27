@@ -56,6 +56,12 @@ export default function Overview() {
   const [recent, setRecent] = useState([]);
   const [firstName, setFirstName] = useState('');
   const [loading, setLoading] = useState(true);
+  const [greeting, setGreeting] = useState(getGreeting());
+
+useEffect(() => {
+  const id = setInterval(() => setGreeting(getGreeting()), 60000);
+  return () => clearInterval(id);
+}, []);
 
   // Name: own account when on your vault, otherwise the vault owner's name.
   useEffect(() => {
@@ -137,7 +143,7 @@ export default function Overview() {
     <FadeIn>
       <div>
         <h1 style={{ fontSize: 'clamp(22px,4vw,30px)', fontWeight: 800, color: T.text, marginBottom: 4 }}>
-          {isOwnerView ? (firstName ? `${t.greeting}, ${firstName}` : '\u00A0') : `${greetingName ? `${greetingName}'s Legacy` : 'Legacy'}`}
+          {isOwnerView ? (firstName ? `${greeting}, ${firstName}` : '\u00A0') : `${greetingName ? `${greetingName}'s Legacy` : 'Legacy'}`}
         </h1>
 
         <p style={{ fontSize: 14, color: T.textMut }}>
